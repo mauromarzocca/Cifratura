@@ -186,9 +186,10 @@ int main()
         cout << endl;
         cout << "\t1)  Cesare" << endl;
         cout << "\t2)  ROT13" << endl;
-        cout << "\t3)  Cifratura MonoAlfabetica" << endl
+        cout << "\t3)  Cifratura MonoAlfabetica"
              << endl;
-        cout << "\t4)  Modifiche versioni Precedenti" << endl;
+        cout << "\t4)  Decodifica del Cifrario di Cesare" << endl;
+        cout << "\t9)  Modifiche versioni Precedenti" << endl;
         cout << "\t0)  Fine";
         cout << endl
              << endl
@@ -221,20 +222,20 @@ int main()
             scelta = -1;
             break;
 
-        case 4:
+                   case 4:
+            decodifica_cesare();
+            cout << endl
+                 << "\t";
+            system("pause");
+            scelta = -1;
+            break;
+
+        case 9:
             mod();
             cout << endl
                  << "\t";
             system("pause");
 
-            scelta = -1;
-            break;
-
-        case 5:
-            decodifica_cesare();
-            cout << endl
-                 << "\t";
-            system("pause");
             scelta = -1;
             break;
 
