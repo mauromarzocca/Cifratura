@@ -141,6 +141,37 @@ void mod()
      cout << "\t      Bug Fix e Nuova Build" << endl;
 }
 
+void decodifica_cesare()
+{
+    const string alfabeto = "ABCDEFGHILMNOPQRSTUVZ";
+    const string cifrato = "DEFGHIJMNOPQRSTUVZABC";
+
+    string frase("");
+    string risultato("");
+    getline(cin, frase);
+
+    cout << " Inserire la parola da decodificare : " << endl;
+    cin >> frase;
+
+    for (int i = 0; i < frase.length(); i++)
+    {
+        bool trovato = false;
+        int j = 0;
+        for (j = 0; j < cifrato.length(); j++)
+        if (toupper(frase[i]) == cifrato[j])
+        {
+           risultato = risultato + alfabeto[j];
+           trovato = true; 
+        }
+        if (trovato == false) 
+        {
+            risultato = risultato + frase[i];
+        }
+    }
+    cout << "\nLa parola decodificata con Cesare e' : " << risultato << endl << endl;
+}
+
+
 int main()
 {
     int scelta = -1;
@@ -183,6 +214,12 @@ int main()
                         cout << endl << "\t";
                       system("pause");
                       
+                      scelta = -1;
+                      break;
+
+                       case 5: decodifica_cesare();
+                        cout << endl << "\t";
+                      system("pause");
                       scelta = -1;
                       break;
               
