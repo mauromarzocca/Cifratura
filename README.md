@@ -1,7 +1,7 @@
 # Cifratura
 
 <ul>
-<li> Versione : 2.2 </li>
+<li> Versione : 2.3 </li>
 <li> Developer : Mauro Marzocca </li>
 </ul>
 
@@ -29,11 +29,3 @@ La funzione decodifica_cesare si occupa della decodifica della stringa del cifra
 La funzione decodificaRot13 si occupa della decodifica di una stringa cifrata utilizzando ROT13.
 
 La funzione decodifica si occupa della decodifica di una stringa tramite una chiave scelta dall'utente.
-
-## Bug
-
-<ul>
-
-<li> </li>
-
-</ul>
