@@ -1,7 +1,7 @@
 # Cifratura
 
 <ul>
-<li> Versione : 1.6</li>
+<li> Versione : 2.2 </li>
 <li> Developer : Mauro Marzocca </li>
 </ul>
 
