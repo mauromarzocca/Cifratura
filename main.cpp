@@ -161,6 +161,30 @@ void decodifica_cesare()
     cout << "\nLa parola decodificata con Cesare e' : " << risultato << endl << endl;
 }
 
+void decodificaRot13()
+{
+    string frase("");
+    string risultato("");
+    cout << "\tInserire la frase da decifrare: ";
+    getline(cin, frase);
+
+    for (int i = 0; i < frase.length(); i++)
+    {
+        int c = (int)frase[i];
+        if (c >= 65 && c <= 77)
+            c = c + 13;
+        else if (c >= 78 && c <= 90)
+            c = c - 13;
+        else if (c >= 97 && c <= 109)
+            c = c + 13;
+        else if (c >= 110 && c <= 122)
+            c = c - 13;
+        risultato = risultato + (char)c;
+    }
+    cout << "\nLa parola decodificata con ROT13 e' : " << risultato << endl << endl;
+}
+
+
 
 void mod()
 {
@@ -194,6 +218,9 @@ void mod()
     cout << "\t      Bug Fix" << endl;
     cout << "\t - Versione 1.9" << endl;
     cout << "\t      Miglioramenti alla Cifratura Monoalfabetica" << endl;
+    cout << "\t - Versione 1.10" << endl;
+    cout << "\t      Implementazione Della Decofica di ROT13" << endl;
+
 }
 
 int main()
@@ -206,13 +233,14 @@ int main()
              << "\t-------CIFRATURA------" << endl
              << endl;
         cout << "\tProgramma realizzato da Mauro Marzocca" << endl;
-        cout << "\tVersione 1.9" << endl;
+        cout << "\tVersione 1.10" << endl;
         cout << endl;
         cout << "\t1)  Cesare" << endl;
         cout << "\t2)  ROT13" << endl;
         cout << "\t3)  Cifratura MonoAlfabetica"
              << endl;
         cout << "\t4)  Decodifica del Cifrario di Cesare" << endl;
+        cout << "\t5)  Decodifica di ROT13" << endl;
         cout << "\t9)  Modifiche versioni Precedenti" << endl;
         cout << "\t0)  Fine";
         cout << endl
@@ -256,6 +284,15 @@ int main()
             system("pause");
             scelta = -1;
             break;
+
+            case 5:
+                cin.ignore(); // pulisci il buffer di input
+                decodificaRot13();
+                cout << endl
+                     << "\t";
+                system("pause");
+                scelta = -1;
+                break;
 
         case 9:
             mod();
