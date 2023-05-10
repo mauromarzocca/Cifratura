@@ -13,8 +13,6 @@
 
 using namespace std;
 
-const int CARATTERI = 100;
-
 void cesare()
 {
     const string alfabeto = "abcdefghijklmnopqrstuvwxyzxz";
