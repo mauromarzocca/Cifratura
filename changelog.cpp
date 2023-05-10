@@ -64,4 +64,6 @@ void mod()
     cout << "\t      Ottimizzazione Build" << endl;
     cout << "\t - Versione 2.2" << endl;
     cout << "\t      Build Stabile" << endl;
+    cout << "\t - Versione 2.2.1" << endl;
+    cout << "\t      Bug Fix" << endl;
 }
