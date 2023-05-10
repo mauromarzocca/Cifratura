@@ -30,6 +30,6 @@ La funzione decodifica_cesare si occupa della decodifica della parola del cifrar
 
 <ul>
 
-<li> Cifratura Frase -> Attualmente si limita solo ad una parola (Problema con lo spazio)</li>
+<li> </li>
 
 </ul>
