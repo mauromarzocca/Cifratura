@@ -15,60 +15,45 @@
 
 using namespace std;
 
-void decodifica()
-{
-    const int CARATTERI = 1000; // costante per la lunghezza massima della stringa
-    char t_originale[CARATTERI + 1];
-    char t_decifrato[CARATTERI + 1];
+void decodifica() {
+    string t_cifrato;
+    string t_originale = "";
     int chiave;
-    int lung_string;
-    int buffer;
 
     cout << "\tInserisci il testo da decifrare: ";
-    cin.ignore(); // ignore any previous input
-    cin.getline(t_originale, CARATTERI);
-    lung_string = strlen(t_originale);
+    getline(cin, t_cifrato);
 
     cout << "\tInserisci la chiave: ";
     cin >> chiave;
 
-    if (chiave >= 0)
-    {
-        for (int t = 0; t < lung_string; t++)
-        {
-            if (t_originale[t] == ' ')
-            {
-                t_decifrato[t] = ' '; // salva lo spazio nella decifratura
+    if (chiave >= 0) {
+        for (int t = 0; t < t_cifrato.length(); t++) {
+            if (t_cifrato[t] == ' ') {
+                t_originale += ' ';
             }
-            else if (t_originale[t] > 95)
-            {
-                buffer = ((t_originale[t] - chiave + 192) % 96) % 26;
-                if (buffer == 0)
-                {
+            else if (t_cifrato[t] > 95) {
+                int buffer = ((t_cifrato[t] - chiave - 96) % 26);
+                if (buffer == 0) {
                     buffer = 26;
                 }
-                t_decifrato[t] = 96 + buffer;
+                t_originale += buffer + 96;
             }
-            else
-            {
-                buffer = ((t_originale[t] - chiave + 128) % 64) % 26;
-                if (buffer == 0)
-                {
+            else {
+                int buffer = ((t_cifrato[t] - chiave - 64) % 26);
+                if (buffer == 0) {
                     buffer = 26;
                 }
-                t_decifrato[t] = 64 + buffer;
+                t_originale += buffer + 64;
             }
         }
-        t_decifrato[lung_string] = '\0';
-        cout << "\tTesto decifrato : " << t_decifrato << endl;
+
+        cout << "\tTesto decifrato: " << t_originale << endl;
     }
-    else
-    {
-        do
-        {
+    else {
+        do {
             system("CLS");
             cout << "\tErrore Inserimento! Valore non valido!\n";
-            cout << "\tParola Inserita : " << t_originale << endl;
+            cout << "\tParola Inserita : " << t_cifrato << endl;
             cout << "\tInserisci la chiave: ";
             cin >> chiave;
         } while (chiave < 0);
