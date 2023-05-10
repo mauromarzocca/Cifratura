@@ -71,49 +71,44 @@ void rot13()
 
 void cif()
 {
-    const int CARATTERI = 1000; // costante per la lunghezza massima della stringa
-    char t_originale[CARATTERI + 1];
-    char t_cifrato[CARATTERI + 1];
+    string t_originale;
+    string t_cifrato = "";
     int chiave;
-    int lung_string;
-    int buffer;
 
     cout << "\tInserisci il testo da cifrare: ";
-    cin.ignore(); // ignore any previous input
-    cin.getline(t_originale, CARATTERI);
-    lung_string = strlen(t_originale);
+    getline(cin, t_originale);
 
     cout << "\tInserisci la chiave: ";
     cin >> chiave;
 
     if (chiave >= 0)
     {
-        for (int t = 0; t < lung_string; t++)
+        for (int t = 0; t < t_originale.length(); t++)
         {
             if (t_originale[t] == ' ')
             {
-                t_cifrato[t] = ' '; // salva lo spazio nella cifratura
+                t_cifrato += ' ';
             }
             else if (t_originale[t] > 95)
             {
-                buffer = ((t_originale[t] + chiave) % 96) % 26;
+                int buffer = ((t_originale[t] + chiave) % 96) % 26;
                 if (buffer == 0)
                 {
                     buffer = 26;
                 }
-                t_cifrato[t] = 96 + buffer;
+                t_cifrato += 96 + buffer;
             }
             else
             {
-                buffer = ((t_originale[t] + chiave) % 64) % 26;
+                int buffer = ((t_originale[t] + chiave) % 64) % 26;
                 if (buffer == 0)
                 {
                     buffer = 26;
                 }
-                t_cifrato[t] = 64 + buffer;
+                t_cifrato += 64 + buffer;
             }
         }
-        t_cifrato[lung_string] = '\0';
+
         cout << "\tTesto cifrato : " << t_cifrato << endl;
     }
     else
@@ -128,7 +123,6 @@ void cif()
         } while (chiave < 0);
     }
 }
-
 
 
 void decodifica_cesare()
@@ -184,7 +178,65 @@ void decodificaRot13()
     cout << "\nLa parola decodificata con ROT13 e' : " << risultato << endl << endl;
 }
 
+void decodifica()
+{
+    const int CARATTERI = 1000; // costante per la lunghezza massima della stringa
+    char t_originale[CARATTERI + 1];
+    char t_decifrato[CARATTERI + 1];
+    int chiave;
+    int lung_string;
+    int buffer;
 
+    cout << "\tInserisci il testo da decifrare: ";
+    cin.ignore(); // ignore any previous input
+    cin.getline(t_originale, CARATTERI);
+    lung_string = strlen(t_originale);
+
+    cout << "\tInserisci la chiave: ";
+    cin >> chiave;
+
+    if (chiave >= 0)
+    {
+        for (int t = 0; t < lung_string; t++)
+        {
+            if (t_originale[t] == ' ')
+            {
+                t_decifrato[t] = ' '; // salva lo spazio nella decifratura
+            }
+            else if (t_originale[t] > 95)
+            {
+                buffer = ((t_originale[t] - chiave + 192) % 96) % 26;
+                if (buffer == 0)
+                {
+                    buffer = 26;
+                }
+                t_decifrato[t] = 96 + buffer;
+            }
+            else
+            {
+                buffer = ((t_originale[t] - chiave + 128) % 64) % 26;
+                if (buffer == 0)
+                {
+                    buffer = 26;
+                }
+                t_decifrato[t] = 64 + buffer;
+            }
+        }
+        t_decifrato[lung_string] = '\0';
+        cout << "\tTesto decifrato : " << t_decifrato << endl;
+    }
+    else
+    {
+        do
+        {
+            system("CLS");
+            cout << "\tErrore Inserimento! Valore non valido!\n";
+            cout << "\tParola Inserita : " << t_originale << endl;
+            cout << "\tInserisci la chiave: ";
+            cin >> chiave;
+        } while (chiave < 0);
+    }
+}
 
 void mod()
 {
@@ -220,6 +272,15 @@ void mod()
     cout << "\t      Miglioramenti alla Cifratura Monoalfabetica" << endl;
     cout << "\t - Versione 1.10" << endl;
     cout << "\t      Implementazione Della Decofica di ROT13" << endl;
+    cout << "\t - Versione 1.10.1" << endl;
+    cout << "\t      Bug Fix" << endl;
+    cout << "\t - Versione 1.11" << endl;
+    cout << "\t      Implementazione Della Decofica MonoAlfabetica" << endl;
+    cout << "\t - Versione 1.11.1" << endl;
+    cout << "\t      Bug Fix" << endl;
+    cout << "\t - Versione 2.0" << endl;
+    cout << "\t      Nuova Build" << endl;
+    
 
 }
 
@@ -233,15 +294,16 @@ int main()
              << "\t-------CIFRATURA------" << endl
              << endl;
         cout << "\tProgramma realizzato da Mauro Marzocca" << endl;
-        cout << "\tVersione 1.10" << endl;
+        cout << "\tVersione 2.0" << endl;
         cout << endl;
         cout << "\t1)  Cesare" << endl;
         cout << "\t2)  ROT13" << endl;
         cout << "\t3)  Cifratura MonoAlfabetica"
-             << endl;
+             << endl << endl;
         cout << "\t4)  Decodifica del Cifrario di Cesare" << endl;
         cout << "\t5)  Decodifica di ROT13" << endl;
-        cout << "\t9)  Modifiche versioni Precedenti" << endl;
+        cout << "\t6)  Decodifica MonoAlfabetica" << endl;
+        cout << endl << "\t9)  Modifiche versioni Precedenti" << endl;
         cout << "\t0)  Fine";
         cout << endl
              << endl
@@ -288,6 +350,15 @@ int main()
             case 5:
                 cin.ignore(); // pulisci il buffer di input
                 decodificaRot13();
+                cout << endl
+                     << "\t";
+                system("pause");
+                scelta = -1;
+                break;
+
+            case 6:
+                cin.ignore(); // pulisci il buffer di input
+                decodifica();
                 cout << endl
                      << "\t";
                 system("pause");
