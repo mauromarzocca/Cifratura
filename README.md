@@ -26,6 +26,7 @@ Il programma continua a eseguire fino a quando l'utente non sceglie l'opzione "F
 
 La funzione decodifica_cesare si occupa della decodifica della stringa del cifrario di Cesare.
 
+La funzione decodificaRot13 si occupa della decodifica di una stringa cifrata utilizzando ROT13.
 
 La funzione decodifica si occupa della decodifica di una stringa tramite una chiave scelta dall'utente.
 
