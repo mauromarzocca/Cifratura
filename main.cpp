@@ -16,8 +16,9 @@ using namespace std;
 
 void cesare()
 {
-    const string alfabeto = "ABCDEFGHILMNOPQRSTUVZ";
-    const string cifrato = "defghilmnopqrstuvzabc";
+    const string alfabeto = "abcdefghijklmnopqrstuvwxyzxz";
+    const string cifrato = "defghijklmnopqrstuvwxyzabc";
+
 
     string frase("");
     string risultato("");
@@ -31,7 +32,7 @@ void cesare()
         bool trovato = false;
         int j = 0;
         for (j = 0; j < alfabeto.length(); j++)
-            if (toupper(frase[i]) == alfabeto[j])
+            if (tolower(frase[i]) == tolower(alfabeto[j]))
             {
                 risultato = risultato + cifrato[j];
                 trovato = true;
@@ -42,6 +43,7 @@ void cesare()
         }
     }
     cout << "\tLa parola cifrata con Cesare e' : " << risultato << endl;
+
 }
 
 void rot13()
@@ -124,14 +126,14 @@ void cif()
 
 void decodifica_cesare()
 {
-    const string alfabeto = "ABCDEFGHILMNOPQRSTUVZ";
-    const string cifrato = "defghilmnopqrstuvzabc";
-
+    const string alfabeto = "abcdefghijklmnopqrstuvwxyzxz";
+    const string cifrato = "defghijklmnopqrstuvwxyzabc";
+    
     string frase("");
     string risultato("");
     getline(cin, frase);
 
-    cout << " Inserire la parola da decodificare : " << endl;
+    cout << " Inserire la parola da decodificare : ";
     cin >> frase;
 
     for (int i = 0; i < frase.length(); i++)
@@ -139,7 +141,7 @@ void decodifica_cesare()
         bool trovato = false;
         int j = 0;
         for (j = 0; j < cifrato.length(); j++)
-        if (toupper(frase[i]) == cifrato[j])
+        if (tolower(frase[i]) == tolower(cifrato[j]))
         {
            risultato = risultato + alfabeto[j];
            trovato = true;
@@ -175,6 +177,8 @@ void mod()
     cout << "\t      Bug Fix" << endl;
     cout << "\t - Versione 1.5.2" << endl;
     cout << "\t      Bug Fix" << endl;
+    cout << "\t - Versione 1.6" << endl;
+    cout << "\t      Nuova Build" << endl;
 }
 
 int main()
@@ -187,7 +191,7 @@ int main()
              << "\t-------CIFRATURA------" << endl
              << endl;
         cout << "\tPercorso realizzato da Mauro Marzocca" << endl;
-        cout << "\tVersione 1.5.2" << endl;
+        cout << "\tVersione 1.6" << endl;
         cout << endl;
         cout << "\t1)  Cesare" << endl;
         cout << "\t2)  ROT13" << endl;
