@@ -35,5 +35,6 @@ void decodificaRot13()
             c = c - 13;
         risultato = risultato + (char)c;
     }
-    cout << "\nLa parola decodificata con ROT13 e' : " << risultato << endl << endl;
+    cout << "\tLa parola decodificata con ROT13 e' : " << risultato << endl
+         << endl;
 }
