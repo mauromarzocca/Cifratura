@@ -66,4 +66,6 @@ void mod()
     cout << "\t      Build Stabile" << endl;
     cout << "\t - Versione 2.2.1" << endl;
     cout << "\t      Bug Fix" << endl;
+    cout << "\t - Versione 2.3" << endl;
+    cout << "\t      Build Release" << endl;
 }
