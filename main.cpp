@@ -172,6 +172,8 @@ void mod()
     cout << "\t      Implementazione Della Decofica del Cifrario di Cesare" << endl;
     cout << "\t - Versione 1.5.1" << endl;
     cout << "\t      Bug Fix" << endl;
+    cout << "\t - Versione 1.5.2" << endl;
+    cout << "\t      Bug Fix" << endl;
 }
 
 int main()
@@ -184,7 +186,7 @@ int main()
              << "\t-------CIFRATURA------" << endl
              << endl;
         cout << "\tPercorso realizzato da Mauro Marzocca" << endl;
-        cout << "\tVersione 1.5.1" << endl;
+        cout << "\tVersione 1.5.2" << endl;
         cout << endl;
         cout << "\t1)  Cesare" << endl;
         cout << "\t2)  ROT13" << endl;
