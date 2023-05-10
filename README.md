@@ -24,4 +24,4 @@ Dopo aver scelto il metodo di cifratura, l'utente deve inserire la frase o la pa
 Il programma cifra la frase o la parola, e mostra il testo cifrato.
 Il programma continua a eseguire fino a quando l'utente non sceglie l'opzione "Fine".
 
-La funzione 
+La funzione decodifica_cesare si occupa della decodifica della parola del cifrario di Cesare.
