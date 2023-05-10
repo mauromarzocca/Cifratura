@@ -25,3 +25,13 @@ Il programma cifra la frase o la parola, e mostra il testo cifrato.
 Il programma continua a eseguire fino a quando l'utente non sceglie l'opzione "Fine".
 
 La funzione decodifica_cesare si occupa della decodifica della parola del cifrario di Cesare.
+
+## Bug
+
+<ul>
+
+<li> Cifratura Frase -> Attualmente si limita solo ad una parola (Problema con lo spazio)</li>
+<li> Nel cifrario di cesare non sono presenti le lettere straniere</li>
+<li> Nel cifrario di cesare vengono stampate a video solo le lettere maiuscole</li>
+
+</ul>

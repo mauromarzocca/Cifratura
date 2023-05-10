@@ -124,7 +124,7 @@ void cif()
 
 void decodifica_cesare()
 {
-    const string alfabeto = "ABCDEFGHIJKLMNOPQRSTUVXYZ";
+   const string alfabeto = "ABCDEFGHIJKLMNOPQRSTUVXYZ";
     const string cifrato = "defghijklmnopqrstuvxyz";
 
     string frase("");
