@@ -21,8 +21,6 @@
 
 using namespace std;
 
-
-
 int main()
 {
     int scelta = -1;
@@ -38,11 +36,13 @@ int main()
         cout << "\t1)  Cesare" << endl;
         cout << "\t2)  ROT13" << endl;
         cout << "\t3)  Cifratura MonoAlfabetica"
-             << endl << endl;
+             << endl
+             << endl;
         cout << "\t4)  Decodifica del Cifrario di Cesare" << endl;
         cout << "\t5)  Decodifica di ROT13" << endl;
         cout << "\t6)  Decodifica MonoAlfabetica" << endl;
-        cout << endl << "\t9)  Modifiche versioni Precedenti" << endl;
+        cout << endl
+             << "\t9)  Modifiche versioni Precedenti" << endl;
         cout << "\t0)  Fine";
         cout << endl
              << endl
@@ -52,7 +52,7 @@ int main()
         switch (scelta)
         {
         case 1:
-                cin.ignore(); // pulisci il buffer di input
+            cin.ignore(); // pulisci il buffer di input
             cesare();
             cout << endl
                  << "\t";
@@ -61,7 +61,7 @@ int main()
             break;
 
         case 2:
-                cin.ignore(); // pulisci il buffer di input
+            cin.ignore(); // pulisci il buffer di input
             rot13();
             cout << endl
                  << "\t";
@@ -70,7 +70,7 @@ int main()
             break;
 
         case 3:
-                cin.ignore(); // pulisci il buffer di input
+            cin.ignore(); // pulisci il buffer di input
             cif();
             cout << endl
                  << "\t";
@@ -79,7 +79,7 @@ int main()
             break;
 
         case 4:
-                cin.ignore(); // pulisci il buffer di input
+            cin.ignore(); // pulisci il buffer di input
             decodifica_cesare();
             cout << endl
                  << "\t";
@@ -87,23 +87,23 @@ int main()
             scelta = -1;
             break;
 
-            case 5:
-                cin.ignore(); // pulisci il buffer di input
-                decodificaRot13();
-                cout << endl
-                     << "\t";
-                system("pause");
-                scelta = -1;
-                break;
+        case 5:
+            cin.ignore(); // pulisci il buffer di input
+            decodificaRot13();
+            cout << endl
+                 << "\t";
+            system("pause");
+            scelta = -1;
+            break;
 
-            case 6:
-                cin.ignore(); // pulisci il buffer di input
-                decodifica();
-                cout << endl
-                     << "\t";
-                system("pause");
-                scelta = -1;
-                break;
+        case 6:
+            cin.ignore(); // pulisci il buffer di input
+            decodifica();
+            cout << endl
+                 << "\t";
+            system("pause");
+            scelta = -1;
+            break;
 
         case 9:
             mod();
