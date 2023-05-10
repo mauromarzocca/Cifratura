@@ -1,7 +1,8 @@
 # Cifratura
 
 <ul>
-<li> Versione : </li>
+<li> Versione : 1.5.1</li>
+<li> Developer : Mauro Marzocca </li>
 </ul>
 
 Il codice in C++ si tratta di un programma di cifratura che utilizza tre diversi metodi di cifratura: Cesare, ROT13 e cifratura monoalfabetica.
@@ -22,3 +23,5 @@ Il programma è strutturato in modo da mostrare un menu all'utente, con cui sceg
 Dopo aver scelto il metodo di cifratura, l'utente deve inserire la frase o la parola da cifrare.
 Il programma cifra la frase o la parola, e mostra il testo cifrato.
 Il programma continua a eseguire fino a quando l'utente non sceglie l'opzione "Fine".
+
+La funzione 
