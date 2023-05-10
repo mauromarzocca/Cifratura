@@ -15,7 +15,8 @@
 
 using namespace std;
 
-void decodifica() {
+void decodifica()
+{
     string t_cifrato;
     string t_originale = "";
     int chiave;
@@ -26,21 +27,28 @@ void decodifica() {
     cout << "\tInserisci la chiave: ";
     cin >> chiave;
 
-    if (chiave >= 0) {
-        for (int t = 0; t < t_cifrato.length(); t++) {
-            if (t_cifrato[t] == ' ') {
+    if (chiave >= 0)
+    {
+        for (int t = 0; t < t_cifrato.length(); t++)
+        {
+            if (t_cifrato[t] == ' ')
+            {
                 t_originale += ' ';
             }
-            else if (t_cifrato[t] > 95) {
+            else if (t_cifrato[t] > 95)
+            {
                 int buffer = ((t_cifrato[t] - chiave - 96) % 26);
-                if (buffer == 0) {
+                if (buffer == 0)
+                {
                     buffer = 26;
                 }
                 t_originale += buffer + 96;
             }
-            else {
+            else
+            {
                 int buffer = ((t_cifrato[t] - chiave - 64) % 26);
-                if (buffer == 0) {
+                if (buffer == 0)
+                {
                     buffer = 26;
                 }
                 t_originale += buffer + 64;
@@ -49,8 +57,10 @@ void decodifica() {
 
         cout << "\tTesto decifrato: " << t_originale << endl;
     }
-    else {
-        do {
+    else
+    {
+        do
+        {
             system("CLS");
             cout << "\tErrore Inserimento! Valore non valido!\n";
             cout << "\tParola Inserita : " << t_cifrato << endl;
