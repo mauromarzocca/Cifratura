@@ -168,7 +168,7 @@ void decodifica_cesare()
             risultato = risultato + frase[i];
         }
     }
-    cout << "\nLa parola decodificata con Cesare e' : " << risultato << endl << endl;
+    cout << "\nLa parola decodificata con Cesare e' : " << risultato << endl;
 }
 
 
