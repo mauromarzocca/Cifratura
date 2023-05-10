@@ -36,6 +36,8 @@ void mod()
     cout << "\t      Bug Fix" << endl;
     cout << "\t - Versione 1.5.2" << endl;
     cout << "\t      Bug Fix" << endl;
+    system("pause");
+    system("cls");
     cout << "\t - Versione 1.6" << endl;
     cout << "\t      Nuova Build" << endl;
     cout << "\t - Versione 1.7" << endl;
