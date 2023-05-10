@@ -168,6 +168,8 @@ void mod()
     cout << "\t      Nuova Release" << endl;
     cout << "\t - Versione 1.4" << endl;
     cout << "\t      Bug Fix e Nuova Build" << endl;
+    cout << "\t - Versione 1.5" << endl;
+    cout << "\t      Implementazione Della Decofica del Cifrario di Cesare" << endl;
 }
 
 int main()
