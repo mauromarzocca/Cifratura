@@ -123,23 +123,6 @@ do
 } while (chiave < 0);
 }
 }
-void mod()
-{
-     cout << "\t - Versione 1.0" << endl;
-     cout << "\t    Release iniziale. " << endl;
-     cout << "\t - Versione 1.0.1" << endl;
-     cout << "\t    Risoluzione di alcuni Bug. " << endl;
-     cout << "\t - Versione 1.1" << endl;
-     cout << "\t      Codice Migliorato" << endl;
-     cout << "\t - Versione 1.2" << endl;
-     cout << "\t      Release Stabile" << endl;
-     cout << "\t - Versione 1.2.1" << endl;
-     cout << "\t      Bug Fix" << endl;
-     cout << "\t - Versione 1.3" << endl;
-     cout << "\t      Nuova Release" << endl;
-     cout << "\t - Versione 1.4" << endl;
-     cout << "\t      Bug Fix e Nuova Build" << endl;
-}
 
 void decodifica_cesare()
 {
@@ -170,6 +153,25 @@ void decodifica_cesare()
     }
     cout << "\nLa parola decodificata con Cesare e' : " << risultato << endl;
 }
+
+void mod()
+{
+     cout << "\t - Versione 1.0" << endl;
+     cout << "\t    Release iniziale. " << endl;
+     cout << "\t - Versione 1.0.1" << endl;
+     cout << "\t    Risoluzione di alcuni Bug. " << endl;
+     cout << "\t - Versione 1.1" << endl;
+     cout << "\t      Codice Migliorato" << endl;
+     cout << "\t - Versione 1.2" << endl;
+     cout << "\t      Release Stabile" << endl;
+     cout << "\t - Versione 1.2.1" << endl;
+     cout << "\t      Bug Fix" << endl;
+     cout << "\t - Versione 1.3" << endl;
+     cout << "\t      Nuova Release" << endl;
+     cout << "\t - Versione 1.4" << endl;
+     cout << "\t      Bug Fix e Nuova Build" << endl;
+}
+
 
 
 int main()
