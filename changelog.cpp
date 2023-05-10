@@ -54,9 +54,12 @@ void mod()
     cout << "\t      Implementazione Della Decofica MonoAlfabetica" << endl;
     cout << "\t - Versione 1.11.1" << endl;
     cout << "\t      Bug Fix" << endl;
+    system("pause");
+    system("cls");
     cout << "\t - Versione 2.0" << endl;
     cout << "\t      Nuova Build" << endl;
     cout << "\t - Versione 2.1" << endl;
     cout << "\t      Ottimizzazione Build" << endl;
-
+    cout << "\t - Versione 2.2" << endl;
+    cout << "\t      Build Stabile" << endl;
 }
