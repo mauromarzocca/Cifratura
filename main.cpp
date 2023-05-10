@@ -16,8 +16,8 @@ using namespace std;
 
 void cesare()
 {
-    const string alfabeto = "ABCDEFGHIJKLMNOPQRSTUVXYZ";
-    const string cifrato = "defghijklmnopqrstuvxyz";
+    const string alfabeto = "ABCDEFGHILMNOPQRSTUVZ";
+    const string cifrato = "defghilmnopqrstuvzabc";
 
     string frase("");
     string risultato("");
@@ -124,8 +124,8 @@ void cif()
 
 void decodifica_cesare()
 {
-   const string alfabeto = "ABCDEFGHIJKLMNOPQRSTUVXYZ";
-    const string cifrato = "defghijklmnopqrstuvxyz";
+    const string alfabeto = "ABCDEFGHILMNOPQRSTUVZ";
+    const string cifrato = "defghilmnopqrstuvzabc";
 
     string frase("");
     string risultato("");
@@ -139,18 +139,19 @@ void decodifica_cesare()
         bool trovato = false;
         int j = 0;
         for (j = 0; j < cifrato.length(); j++)
-            if (toupper(frase[i]) == cifrato[j])
-            {
-                risultato = risultato + alfabeto[j];
-                trovato = true;
-            }
+        if (toupper(frase[i]) == cifrato[j])
+        {
+           risultato = risultato + alfabeto[j];
+           trovato = true;
+        }
         if (trovato == false)
         {
             risultato = risultato + frase[i];
         }
     }
-    cout << "\nLa parola decodificata con Cesare e' : " << risultato << endl;
+    cout << "\nLa parola decodificata con Cesare e' : " << risultato << endl << endl;
 }
+
 
 void mod()
 {
