@@ -52,10 +52,8 @@ void rot13()
 
     string frase("");
     string risultato("");
-    getline(cin, frase);
-
     cout << "\tInserire la parola da criptare : ";
-    cin >> frase;
+    getline(cin, frase);
 
     for (int i = 0; i < frase.length(); i++)
     {
@@ -75,6 +73,7 @@ void rot13()
 
 void cif()
 {
+    const int CARATTERI = 1000; // costante per la lunghezza massima della stringa
     char t_originale[CARATTERI + 1];
     char t_cifrato[CARATTERI + 1];
     int chiave;
@@ -82,15 +81,22 @@ void cif()
     int buffer;
 
     cout << "\tInserisci il testo da cifrare: ";
-    cin >> t_originale;
+    cin.ignore(); // ignore any previous input
+    cin.getline(t_originale, CARATTERI);
     lung_string = strlen(t_originale);
+
     cout << "\tInserisci la chiave: ";
     cin >> chiave;
+
     if (chiave >= 0)
     {
         for (int t = 0; t < lung_string; t++)
         {
-            if (t_originale[t] > 95)
+            if (t_originale[t] == ' ')
+            {
+                t_cifrato[t] = ' '; // salva lo spazio nella cifratura
+            }
+            else if (t_originale[t] > 95)
             {
                 buffer = ((t_originale[t] + chiave) % 96) % 26;
                 if (buffer == 0)
@@ -124,6 +130,8 @@ void cif()
         } while (chiave < 0);
     }
 }
+
+
 
 void decodifica_cesare()
 {
@@ -182,6 +190,12 @@ void mod()
     cout << "\t      Nuova Build" << endl;
     cout << "\t - Versione 1.7" << endl;
     cout << "\t      Miglioramenti al cifrario di Cesare" << endl;
+    cout << "\t - Versione 1.8" << endl;
+    cout << "\t      Miglioramenti di ROT13" << endl;
+    cout << "\t - Versione 1.8.1" << endl;
+    cout << "\t      Bug Fix" << endl;
+    cout << "\t - Versione 1.9" << endl;
+    cout << "\t      Miglioramenti alla Cifratura Monoalfabetica" << endl;
 }
 
 int main()
@@ -193,8 +207,8 @@ int main()
         cout << endl
              << "\t-------CIFRATURA------" << endl
              << endl;
-        cout << "\tPercorso realizzato da Mauro Marzocca" << endl;
-        cout << "\tVersione 1.7" << endl;
+        cout << "\tProgramma realizzato da Mauro Marzocca" << endl;
+        cout << "\tVersione 1.9" << endl;
         cout << endl;
         cout << "\t1)  Cesare" << endl;
         cout << "\t2)  ROT13" << endl;
@@ -220,6 +234,7 @@ int main()
             break;
 
         case 2:
+                cin.ignore(); // pulisci il buffer di input
             rot13();
             cout << endl
                  << "\t";
