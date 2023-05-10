@@ -10,41 +10,42 @@
 #include <string.h>
 #include <ctype.h>
 #include <cstdlib>
-#define CARATTERI 20
 
 using namespace std;
+
+const int CARATTERI = 100;
 
 void cesare()
 {
     const string alfabeto = "abcdefghijklmnopqrstuvwxyzxz";
     const string cifrato = "defghijklmnopqrstuvwxyzabc";
 
-
     string frase("");
     string risultato("");
+    cout << "\tInserire la frase da criptare : ";
     getline(cin, frase);
-
-    cout << "\tInserire la parola da criptare : ";
-    cin >> frase;
 
     for (int i = 0; i < frase.length(); i++)
     {
         bool trovato = false;
         int j = 0;
         for (j = 0; j < alfabeto.length(); j++)
+        {
             if (tolower(frase[i]) == tolower(alfabeto[j]))
             {
                 risultato = risultato + cifrato[j];
                 trovato = true;
+                break; // interrompi il ciclo una volta che hai trovato il carattere corrispondente
             }
+        }
         if (trovato == false)
         {
             risultato = risultato + frase[i];
         }
     }
-    cout << "\tLa parola cifrata con Cesare e' : " << risultato << endl;
-
+    cout << "\tLa frase cifrata con Cesare e' : " << risultato << endl;
 }
+
 
 void rot13()
 {
@@ -179,6 +180,8 @@ void mod()
     cout << "\t      Bug Fix" << endl;
     cout << "\t - Versione 1.6" << endl;
     cout << "\t      Nuova Build" << endl;
+    cout << "\t - Versione 1.7" << endl;
+    cout << "\t      Miglioramenti al cifrario di Cesare" << endl;
 }
 
 int main()
@@ -191,7 +194,7 @@ int main()
              << "\t-------CIFRATURA------" << endl
              << endl;
         cout << "\tPercorso realizzato da Mauro Marzocca" << endl;
-        cout << "\tVersione 1.6" << endl;
+        cout << "\tVersione 1.7" << endl;
         cout << endl;
         cout << "\t1)  Cesare" << endl;
         cout << "\t2)  ROT13" << endl;
@@ -208,6 +211,7 @@ int main()
         switch (scelta)
         {
         case 1:
+                cin.ignore(); // pulisci il buffer di input
             cesare();
             cout << endl
                  << "\t";
@@ -224,6 +228,7 @@ int main()
             break;
 
         case 3:
+                cin.ignore(); // pulisci il buffer di input
             cif();
             cout << endl
                  << "\t";
