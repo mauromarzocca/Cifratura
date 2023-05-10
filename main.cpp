@@ -31,7 +31,7 @@ int main()
              << "\t-------CIFRATURA------" << endl
              << endl;
         cout << "\tProgramma realizzato da Mauro Marzocca" << endl;
-        cout << "\tVersione 2.2" << endl;
+        cout << "\tVersione 2.2.1" << endl;
         cout << endl;
         cout << "\t1)  Cesare" << endl;
         cout << "\t2)  ROT13" << endl;
