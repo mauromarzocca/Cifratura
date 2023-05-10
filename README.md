@@ -1,7 +1,7 @@
 # Cifratura
 
 <ul>
-<li> Versione : 1.5.1</li>
+<li> Versione : 1.6</li>
 <li> Developer : Mauro Marzocca </li>
 </ul>
 
@@ -31,7 +31,5 @@ La funzione decodifica_cesare si occupa della decodifica della parola del cifrar
 <ul>
 
 <li> Cifratura Frase -> Attualmente si limita solo ad una parola (Problema con lo spazio)</li>
-<li> Nel cifrario di cesare non sono presenti le lettere straniere</li>
-<li> Nel cifrario di cesare vengono stampate a video solo le lettere maiuscole</li>
 
 </ul>
