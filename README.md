@@ -1,5 +1,9 @@
 # Cifratura
- 
+
+<ul>
+<li> Versione : </li>
+</ul>
+
 Il codice in C++ si tratta di un programma di cifratura che utilizza tre diversi metodi di cifratura: Cesare, ROT13 e cifratura monoalfabetica.
 
 La funzione cesare utilizza una stringa alfabeto che contiene le lettere dell'alfabeto in chiaro e una stringa cifrato che contiene le lettere dell'alfabeto cifrate.
